@@ -4,7 +4,7 @@ if (process.env.NODE_ENV !== "production") {
 
 const hapi = require("@hapi/hapi");
 
-const port = 5000;
+const port = process.env.PORT;
 
 async function run() {
   const server = hapi.server({
