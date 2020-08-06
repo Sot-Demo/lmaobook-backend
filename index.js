@@ -16,7 +16,10 @@ async function run() {
   const commentCollection = db.collection("comments");
 
   const server = hapi.server({
-    port: port
+    port: port,
+    routes: {
+      cors: true
+    }
   });
 
   server.route({
